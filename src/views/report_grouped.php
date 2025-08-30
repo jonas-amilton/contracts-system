@@ -19,7 +19,8 @@ require_once __DIR__ . "/../../src/helpers/Formatter.php";
                 <tr>
                     <th>Banco</th>
                     <th>Verba</th>
-                    <th>Data Inclusão</th>
+                    <th>Data Mais Antiga</th>
+                    <th>Data Mais Recente</th>
                     <th>Total Valor</th>
                 </tr>
             </thead>
@@ -28,7 +29,8 @@ require_once __DIR__ . "/../../src/helpers/Formatter.php";
                     <tr>
                         <td><?= htmlspecialchars($g['name']) ?></td>
                         <td><?= htmlspecialchars(Formatter::moneyBR($g['budget'])) ?></td>
-                        <td><?= htmlspecialchars(Formatter::dateBR($g['inclusion_date'])) ?></td>
+                        <td><?= htmlspecialchars(Formatter::dateBR($g['oldest_date'])) ?></td>
+                        <td><?= htmlspecialchars(Formatter::dateBR($g['newest_date'])) ?></td>
                         <td><?= htmlspecialchars(Formatter::moneyBR($g['total_value'])) ?></td>
                     </tr>
                 <?php endforeach; ?>

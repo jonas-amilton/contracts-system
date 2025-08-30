@@ -16,7 +16,8 @@ class Report
             SELECT 
                 b.name,
                 a.budget,
-                c.inclusion_date,
+                MIN(c.inclusion_date) AS oldest_date,
+                MAX(c.inclusion_date) AS newest_date,
                 SUM(c.value) as total_value
             FROM contract c
             JOIN agreement_service s ON c.agreement_service_id = s.id
