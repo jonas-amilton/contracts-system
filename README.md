@@ -1,5 +1,3 @@
-# Desafio Facil Tecnologia
-
 ## Pré-requisitos
 
 PHP 8+
